@@ -1,0 +1,64 @@
+<%- include('partials/header.ejs') %>
+<body>
+  <%- include('partials/navbar.ejs') %>
+  <div class="container">
+    <h1 class="title">Create an Event</h1>
+    <form action="/events/create" method="post">
+      <div class="field">
+        <label class="label">Name</label>
+        <div class="control">
+          <input
+            class="input"
+            type="text"
+            name="name"
+            placeholder="Event name"
+          />
+        </div>
+      </div>
+      <div class="field">
+        <label class="label">image_url</label>
+        <div class="control">
+          <textarea
+            class="textarea"
+            name="image_url"
+            placeholder="image_url"
+          ></textarea>
+        </div>
+      </div>
+      <div class="field">
+        <label class="label">Description</label>
+        <div class="control">
+          <textarea
+            class="textarea"
+            name="description"
+            placeholder="Event description"
+          ></textarea>
+        </div>
+      </div>
+
+      <div class="field">
+        <label class="label">Location</label>
+        <div class="control">
+          <input
+            class="input"
+            type="text"
+            name="location"
+            placeholder="Event location"
+          />
+        </div>
+      </div>
+      <div class="field">
+        <label class="label">Date</label>
+        <div class="control">
+          <input class="input" type="date" name="date" />
+        </div>
+      </div>
+      <div class="field">
+        <div class="control">
+          <button class="button is-link">Create Event</button>
+        </div>
+      </div>
+    </form>
+  </div>
+  <%- include('partials/footer.ejs')%>
+</body>

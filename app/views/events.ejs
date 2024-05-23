@@ -1,0 +1,10 @@
+<%- include('partials/header.ejs') %>
+<body>
+  <%- include('partials/navbar.ejs') %>
+  <div class="container">
+    <h1>Events</h1>
+    <%- include("partials/event_search.ejs") %>
+    <%- include("partials/events_list.ejs", {events: events}) %>
+  </div>
+  <%- include('partials/footer.ejs')%>
+</body>

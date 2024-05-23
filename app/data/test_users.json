@@ -1,0 +1,23 @@
+{
+  "test": {
+    "username": "test",
+    "password": "test",
+    "phone": null,
+    "events": [
+      "17164680310441"
+    ],
+    "interests": []
+  },
+  "marcel": {
+    "username": "marcel",
+    "password": "wiewiora",
+    "phone": null,
+    "events": [
+      "17164682592832"
+    ],
+    "interests": [
+      "17164680310441",
+      "17164652650011"
+    ]
+  }
+}

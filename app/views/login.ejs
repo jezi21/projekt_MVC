@@ -1,0 +1,80 @@
+<%- include('partials/header.ejs') %>
+<body>
+  <%- include('partials/navbar.ejs') %>
+
+  <div class="container">
+    <h1 class="title">Login</h1>
+    <form action="/users/login" method="post">
+      <div class="field">
+        <label class="label">username</label>
+        <div class="control">
+          <input
+            class="input"
+            type="username"
+            name="username"
+            placeholder="username"
+          />
+        </div>
+      </div>
+      <div class="field">
+        <label class="label">Password</label>
+        <div class="control">
+          <input
+            class="input"
+            type="password"
+            name="password"
+            placeholder="Password"
+          />
+        </div>
+      </div>
+      <div class="field">
+        <div class="control">
+          <button class="button is-link">Login</button>
+        </div>
+      </div>
+    </form>
+    <a>Don't have an account? Sign up here</a>
+    <h1 class="title">Register</h1>
+    <form action="/users/register" method="post">
+      <div class="field">
+        <label class="label">username</label>
+        <div class="control">
+          <input
+            class="input"
+            type="username"
+            name="username"
+            placeholder="username"
+          />
+        </div>
+      </div>
+      <div class="field">
+        <label class="label">Password</label>
+        <div class="control">
+          <input
+            class="input"
+            type="password"
+            name="password"
+            placeholder="Password"
+          />
+        </div>
+      </div>
+      <div class="field">
+        <label class="label">phone number</label>
+        <div class="control">
+          <input
+            class="input"
+            type="phone number"
+            name="phone number"
+            placeholder="phone number"
+          />
+        </div>
+      </div>
+      <div class="field">
+        <div class="control">
+          <button class="button is-link">Register</button>
+        </div>
+      </div>
+    </form>
+  </div>
+  <%- include('partials/footer.ejs')%>
+</body>

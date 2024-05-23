@@ -1,0 +1,22 @@
+<%- include('partials/header.ejs') %>
+<body>
+  <%- include('partials/navbar.ejs') %>
+  <div class="container">
+    <h1 class="title">Profile</h1>
+    <h2 class="subtitle">Welcome <%= user.username %></h2>
+    <h2 class="subtitle">Your phone number is <%= user.phone %></h2>
+    <!-- edit profile -->
+    <a href="/users/edit">Edit profile</a>
+    <!-- your events -->
+    <a href="/events/create">
+      <button class="button is-primary">Create event</button>
+    </a>
+    <h2 class="subtitle">Your events</h2>
+
+    <%- include("partials/events_list.ejs", {events: userEvents}) %>
+    <h2 class="subtitle">invents you are interested</h2>
+
+    <%- include("partials/events_list.ejs", {events: interestedEvents}) %>
+  </div>
+  <%- include('partials/footer.ejs')%>
+</body>

@@ -1,0 +1,10 @@
+<div class="columns is-multiline">
+  <% if (Object.values(events).length > 0) { %> <%
+  Object.values(events).forEach(event => { %>
+  <div class="column is-one-third">
+    <%- include("event.ejs", {event: event}) %>
+  </div>
+  <% }); %> <% } else { %>
+  <p>There are no events.</p>
+  <% } %>
+</div>

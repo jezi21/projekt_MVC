@@ -1,0 +1,32 @@
+<div class="card">
+    <div class="card-image">
+      <figure class="image is-4by3">
+        <img alt="Placeholder" src="<%= event.image_url %>"
+        />
+      </figure>
+    </div>
+    <div class="card-content">
+
+      <div class="content">
+        <h4><a href="/events/<%= event.id %>"><%= event.name %></a></h4>
+        <%= event.description %>
+        <br />
+        <a><%= event.location %></a>
+        <br />
+        interested: <%= event.interested %>
+        <form action="/events/add-interested/<%= event.id %>" method="post">
+          <button class="button" type="submit">I am interested</button>
+      </form>
+      <form action="/events/remove-interested/<%= event.id %>" method="post">
+        <button class="button" type="submit">I am NOT interested</button>
+    </form>
+    
+      <button class="button"><a href="/events/edit/<%= event.id %>">edit</a></button>
+      <form action="/events/delete/<%= event.id %>" method="post">
+        <button class="button" type="submit">delete</button>
+    </form>
+
+        <time datetime="2016-1-1">{<%= event.date %>}</time>
+      </div>
+    </div>
+  </div>

@@ -1,0 +1,65 @@
+<%- include('partials/header.ejs') %>
+<body>
+  <%- include('partials/navbar.ejs') %>
+  <div class="container">
+    <h1 class="title">Edit an Event</h1>
+    <form action="/events/edit/<%= event.id %>" method="post">
+      <div class="field">
+        <label class="label">Name</label>
+        <div class="control">
+          <input
+            class="input"
+            type="text"
+            name="name"
+            value="<%= event.name %>"
+          />
+        </div>
+      </div>
+      <div class="field">
+        <label class="label">Description</label>
+        <div class="control">
+          <input
+            class="textarea"
+            name="description"
+            type="text"
+            value="<%= event.description %>"
+          ></input>
+        </div>
+      </div>
+      <div class="field">
+        <label class="label">image_url</label>
+        <div class="control">
+          <input
+            class="textarea"
+            name="image_url"
+            type="text"
+            value="<%= event.image_url %>"
+          ></input>
+        </div>
+      </div>
+      <div class="field">
+        <label class="label">Location</label>
+        <div class="control">
+          <input
+            class="input"
+            type="text"
+            name="location"
+            value="<%= event.location %>"
+          />
+        </div>
+      </div>
+      <div class="field">
+        <label class="label">Date</label>
+        <div class="control">
+          <input class="input" type="date" name="date" value="<%= event.date %>" />
+        </div>
+      </div>
+      <div class="field">
+        <div class="control">
+          <button class="button is-link" type="submit">Edit Event</button>
+        </div>
+      </div>
+    </form>
+  </div>
+  <%- include('partials/footer.ejs')%>
+</body>
